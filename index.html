@@ -10,37 +10,38 @@
         <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
     </head>
     <body>
-        <main>
-            <header class="container">
-                <a href="#" class="icon"> <img class="icon" src="/images/icon-profile.png" alt="profile image"></a>
-                <a href="#" class="logo"> <img class="logo" src="/images/logo.png" alt="tindog logo, white paw with red background"></a>
-                <a href="#" class="icon"> <img class="icon" src="/images/icon-chat.png" alt="chat bubble"></a>
-            </header>
-
-            <!-- Dog info container -->
-            <section class="container">
-                <div class="dog-container">
-                    <img class="dog-img" src="/images/dog-teddy.jpg">
-                    <div class="dog-text">
-                        <h2 class="dog-info-text">Teddy, 30</h2>
-                        <p class="dog-bio-text">How you doin?</p>
-                    </div>
+        <header class="container">
+            <a href="#" class="icon"> <img class="icon" src="/images/icon-profile.png" alt="profile image"></a>
+            <a href="#" class="logo"> <img class="logo" src="/images/logo.png" alt="tindog logo, white paw with red background"></a>
+            <a href="#" class="icon"> <img class="icon" src="/images/icon-chat.png" alt="chat bubble"></a>            
+        </header>
+            
+        <!-- Dog info -->
+        <section class="container">
+            <div class="dog-container">
+                <img src="images/badge-like.png" class="badge-img" id="badge-el">
+                <div class="dog-text-container">
+                    <h2 class="dog-info-text">PLACEHOLDER</h2>
+                    <p class="dog-bio-text">PLACEHOLDER</p>
                 </div>
-            </section>
+            </div>
+        </section>
+            
+        <!-- Choice Buttons -->
+        <section class="container">
+            <div class="choice-container">
+                <button class="choice-btn" id="nope-btn">
+                    <img src="images/icon-cross.png">
+                </button>
 
-            <!-- Button Container -->
-            <section class="container">
-                <div class="choice-container">
-                    <button class="choice-btn">
-                        <img src="images/icon-cross.png">
-                    </button>
+                <button class="choice-btn" id="like-btn">
+                    <img src="images/icon-heart.png">
+                </button>
+            </div>
+        </section>
 
-                    <button class="choice-btn">
-                        <img src="images/icon-heart.png">
-                    </button>
-                </div>
-            </section>
-        </main>
+        
+
         <script src="/index.js" type="module"></script>
     </body>
 </html>

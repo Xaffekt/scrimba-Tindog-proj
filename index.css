@@ -3,33 +3,27 @@ body {
     margin: 0;
     min-width: 100%;
     font-family: 'Poppins', sans-serif;
-}
-
-main {
-    max-width: 550px;
-    margin: 2em auto;
-    border: 2px solid #303030;
-    border-radius: 15px;
-    background: rgb(245, 245, 245);
+    background: linear-gradient(180deg, #FFF 0%, #F6F7FB 100%);
 }
 
 *, *::before, *::after {
     box-sizing: border-box;
     }
 
-.container,
-a {
-    display: flex;
+a,
+button {
+    cursor: pointer;
 }
 
 .container {
+    display: flex;
     max-width: 500px;
-    width: 100%;
-    height: 100%;
-    margin: 0 auto;
+    width: 95%;
+    margin: 0.5em auto;
 
 }
 
+/* Heading Bar */
 header {
     justify-content: space-between;
 }
@@ -41,11 +35,6 @@ a {
     align-items: center;
 }
 
-.icon,
-.logo {
-    width: 100%;
-}
-
 .icon {
     max-width: 35px;
 }
@@ -55,31 +44,33 @@ a {
     height: 45%;
 }
 
+/* Dog section */
+
 .dog-container {
     position: relative;
-    width: 100%;
+    width: 90vh;
+    height: 70vh;
     margin: 0 auto;
-}
-
-.dog-img {
     border-radius: 15px;
-    width: 100%;
-    object-fit: contain;
+    background: url('/images/dog-teddy.jpg'); /* Gets updated in JS */
+    background-size: cover;
+    background-position: center;
 }
 
-.dog-text {
+.dog-text-container {
     position: absolute;
     height: fit-content;
+    width: fit-content;
     top: 85%;
     bottom: 0;
     left: 5%;
     right: 0;
-    
 }
 
 .dog-info-text,
 .dog-bio-text {
     margin: 0;
+    text-shadow: 2px 2px 2px #2c2c2c;
 }
 
 .dog-info-text {
@@ -91,8 +82,10 @@ a {
     font-size: 1.25rem
 }
 
+/* Choice Buttons */
+
 .choice-container {
-    margin: 1em auto;
+    margin: 2em auto;
 }
 
 .choice-btn {
@@ -103,8 +96,25 @@ a {
     margin-right: 1.25em;
 }
 
+.choice-btn:hover,
+.choice-btn:active {
+    background: #DBFFF4;
+    filter: drop-shadow(0px 10px 20px #CCF1E6);
+}
+
 .choice-btn img{
     max-width: 80%;
     max-height: 80%;
     object-fit: contain;
+}
+
+/* Badge */
+
+.badge-img {
+    position: absolute;
+    width: 40%;
+    object-fit: contain;
+    rotate: -30deg;
+    top: 10%;
+    left: 5%;
 }
