@@ -20,6 +20,7 @@ a {
     width: 100%;
     margin: 0 auto;
     padding: 0 0.5em;
+    background: white;
 }
 
 header {
@@ -48,6 +49,7 @@ a {
 }
 
 .dog-container {
+    position: relative;
     width: 100%;
     margin: 0 auto;
 }
@@ -57,4 +59,30 @@ a {
     width: 100%;
     object-fit: contain;
 }
+
+.dog-text {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+.dog-info-text,
+.dog-bio-text {
+    margin: 0;
+}
+
+.dog-info-text {
+    color: white;
+    font-size: 1.75rem;
+}
+.dog-bio-text {
+    color: #B7B7B7;
+    font-size: 1.25rem
+}
+
+
+
+
 
