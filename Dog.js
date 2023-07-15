@@ -18,6 +18,17 @@ class Dog {
     getDogImgUrl() {
         return this.avatar
     }
+
+    getBadgeHtml() {
+        if(this.hasBeenSwiped) {
+            return `<img src="images/badge-nope.png" class="badge-img" id="badge-img"></img>`
+        }
+        else if(this.hasBeenLiked) {
+            return `<img src="images/badge-like.png" class="badge-img" id="badge-img"></img>`
+        }
+        
+        return ''
+    }
 }
 
 export default Dog

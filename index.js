@@ -1,24 +1,48 @@
-// Remember to import the data and Dog class!
 import dogs from './data.js'
 import Dog from "./Dog.js"
 
 
 const dogContainer = document.getElementById('dog-container') //html goes in here, change background as well
-const badgeImg = document.getElementById('badge-img') //.src = " images/badge-nope.png ";
 const nopeBtn = document.getElementById('nope-btn')
 const likeBtn = document.getElementById('like-btn')
 
-document.addEventListener("click", (e) => {
-    console.log('click')
-    console.log(e.target)
-    if(e.target.closest == likeBtn) {
-        console.log('like button has been clicked')
-    }
+//Upadated in newDog()
+let currentDogIndex = 0
+let currentDog = new Dog(dogs[currentDogIndex])
 
+document.addEventListener("click", (e) => {
+    if(e.target === nopeBtn) {
+        currentDog.hasBeenSwiped = true
+        newDog()
+    }
+    else if(e.target === likeBtn) {
+        currentDog.hasBeenLiked = true
+        newDog()
+    }
 
 })
 
-const dog = new Dog(dogs[2])
+
+function newDog() {
+    currentDogIndex++
+
+    if(currentDogIndex <= dogs.length)
+        dogContainer.innerHTML += currentDog.getBadgeHtml()
+
+    setTimeout(() => {    
+    if(currentDogIndex < dogs.length) {
+        currentDog = new Dog(dogs[currentDogIndex])
+        renderDogSection(currentDog)
+    }
+    else {
+        dogContainer.innerHTML = `
+        <h2>Check back later for more dogs!</h2>
+        `
+        dogContainer.style.background = 'whitesmoke'
+        nopeBtn.disabled = true
+        likeBtn.disabled = true
+    }},500)
+}
 
 function renderDogSection(dog) {
     dogContainer.innerHTML = dog.getDogHtml()
@@ -27,7 +51,6 @@ function renderDogSection(dog) {
     dogContainer.style.backgroundPosition = `center`
 }
 
-renderDogSection(dog)
-
+renderDogSection(currentDog)
 
 

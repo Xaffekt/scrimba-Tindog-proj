@@ -1,18 +1,29 @@
-html,
 body {
     margin: 0;
-    min-width: 100%;
+    width: 100%;
+    height: 100vh;
+    overflow-y: hidden;
     font-family: 'Poppins', sans-serif;
     background: linear-gradient(180deg, #FFF 0%, #F6F7FB 100%);
 }
+
+
 
 *, *::before, *::after {
     box-sizing: border-box;
     }
 
+*:disabled {
+    display: none;
+}
+
 a,
 button {
     cursor: pointer;
+}
+
+img {
+    pointer-events: none;
 }
 
 .container {
@@ -30,7 +41,7 @@ header {
 
 a {
     margin: 0 5px;
-    padding: 1.5em 0;
+    padding: 2% 0;
     justify-content: center;
     align-items: center;
 }
@@ -47,6 +58,9 @@ a {
 /* Dog section */
 
 .dog-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     position: relative;
     width: 90vh;
     height: 70vh;
@@ -55,6 +69,7 @@ a {
 }
 
 .dog-text-container {
+
     position: absolute;
     height: fit-content;
     width: fit-content;
@@ -78,6 +93,7 @@ a {
     color: #B7B7B7;
     font-size: 1.25rem
 }
+
 
 /* Choice Buttons */
 
